@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %> 
+    <main>
+        <h1>Estos son los resultados de la búsqueda</h1>
+        <section class="cardList">
+
+            <% if (listado.length != 0) { %>
+                <% for( let i = 0; i < listado.length; i++ ) { %>
+                    <a href="#" class="card">
+                        <span class="rating"><i data-feather="star"></i>9.5</span>
+                        <h2><%= listado[i].title %></h2>
+                        <ul>
+                            <li><%= listado[i].length %> min</li>
+                            <li><%= listado[i].release_date.getFullYear() %></li>
+                        </ul>
+                    </a>
+                <% } %>
+            <% } else { %>
+                <h2>No encontramos películas para esta búsqueda</h2>
+            <% } %>
+
+        </section>
+    </main>
+    <%- include('partials/footer') %> 
+</body>
+</html>

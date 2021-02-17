@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %> 
+    <main>
+        <section class="cardList">
+
+            <% for( let i = 0; i < peliculas.rows.length; i++ ) { %>
+                <a href="/movies/detail/<%= peliculas.rows[i].id %>" class="card">
+                    <span class="rating"><i data-feather="star"></i>9.5</span>
+                    <h2><%= peliculas.rows[i].title %></h2>
+                    <ul>
+                        <li><%= peliculas.rows[i].length %> minutos</li>
+                        <%= peliculas.rows[i].release_date.getFullYear() %></li>
+                    </ul>
+                </a>
+            <% } %>
+
+        </section>
+        <ul>
+            <% for( let i = 0; i < peliculas.count / 9; i++ ) { %>
+                <li><a href="?pagina=<%= i + 1%>"><%= i + 1 %></a></li>
+            <% } %>
+        </ul>
+    </main>
+    <%- include('partials/footer') %> 
+</body>
+</html>

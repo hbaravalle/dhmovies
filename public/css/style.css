@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #eaeaea
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header > a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000
+}
+header form {
+    width: 40%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 100px;
+}
+header form input[name="search"] {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+header form button[type="submit"] {
+    background: none;
+    border: none;
+}
+header form button[type="submit"] > * {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px
+}
+header ul {
+    display: flex;
+    list-style-type: none;
+}
+header ul li {
+    margin-left: 20px;
+}
+header ul li a {
+    padding: 8px 16px;
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+main h1 {
+    margin-bottom: 30px;
+    color: rgba(0,0,0,0.5);
+    font-size: 36px;
+    text-align: center
+}
+
+/* ================
+- Card List
+================ */
+
+section.cardList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section.cardList > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: #000;
+    box-shadow: 
+        0 1px 3px 0 rgba(0,0,0,0.04),
+        0 1px 2px 0 rgba(0,0,0,0.01);
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+section.cardList > a:hover {
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.19),
+        0 6px 6px rgba(0,0,0,0.23);
+}
+
+section.cardList a.card {
+    width: 32%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer
+}
+section.cardList a.card .rating {
+    display: flex;
+    align-items: center;
+}
+section.cardList a.card .rating > * {
+    width: 16px!important;
+    height: 16px!important;
+    fill: orange;
+    stroke: orange;
+    margin-right: 5px
+}
+section.cardList a.card h2 {
+    margin: 5px 0 35px;
+}
+section.cardList a.card ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+/* ================
+- Detail List
+================ */
+
+section.movieDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center    
+}
+section.movieDetail .rating {
+    display: flex;
+    align-items: center;
+}
+section.movieDetail .rating > * {
+    width: 16px!important;
+    height: 16px!important;
+    fill: orange;
+    stroke: orange;
+    margin-right: 5px
+}
+section.movieDetail h1 {
+    font-size: 72px;
+    margin-bottom: 10px;
+}
+section.movieDetail ul {
+    text-align: center
+}
+section.movieDetail ul li {}
+section.movieDetail .controls {
+    display: flex;
+    margin-top: 20px;
+}
+
+section.movieDetail .controls button {
+    padding: 8px 16px;
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 3px
+}
+
+section.movieDetail .controls button + form {
+    margin-left: 10px;
+}
+
+section.movieDetail .controls form {
+    display: flex;
+}
+
+section.movieDetail .controls form > button {
+    background: red
+}
+
+/* ================
+- Detail List
+================ */
+
+section.movieForm {
+    display: flex;
+    justify-content: center;
+}
+
+section.movieForm form {
+    width: 50%;
+}
+
+section.movieForm form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px
+}
+
+section.movieForm form .form-group input {
+    border: 1px solid rgba(0,0,0,0.15);
+    font-size: 24px;
+    padding: 3px 6px;
+}
+
+section.movieForm form button[type="submit"] {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 10px;
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 3px
+}

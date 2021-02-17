@@ -1,0 +1,10 @@
+<header>
+    <a href="/">justSomePelis</a>
+    <form action="/movies/search">
+        <input type="text" name="search" id="search" value="<%= (typeof laQuery != 'undefined') ? laQuery : '' %>">
+        <button type="submit"><i data-feather="search"></i></button>
+    </form>
+    <ul>
+        <li><a href="/movies/create">+ Nueva pelicula</a></li>
+    </ul>
+</header>

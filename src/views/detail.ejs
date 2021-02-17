@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %> 
+    <main>
+        <section class="movieDetail">
+            <span class="rating"><i data-feather="star"></i><%= pelicula.rating %></span>
+            <h1><%= pelicula.title %></h1>
+            <ul>
+                <li>Duración: <%= pelicula.length %></li>
+                <li>Premios: <%= pelicula.awards %></li>
+                <li>Estreno: <%= pelicula.release_date %></li>
+            </ul>
+            <div class="controls">
+                <a style="cursor:pointer" href="/movies/edit/<%= pelicula.id %>"><button>Editar</button></a>
+                <form action="/movies/delete/<%= pelicula.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Borrar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') %> 
+</body>
+</html>
